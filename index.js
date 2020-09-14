@@ -27,11 +27,12 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ * counter 1 is using a closure as counter 2 is not.
  * 
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * counter 1 is using a closure because it is using the counterMaker as its parent function to complete its process.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *counter 1 would be used if you planned on using that function again over time. Counter 2 would be used if you wanted to count 1 thing 1 time.
 */
 
 // counter1 code
@@ -56,11 +57,11 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
+return  Math.round(Math.random())*2
+};
 
-    /*Code Here*/
 
-}
 
 /* Task 3: finalScore()
 
@@ -75,37 +76,51 @@ finalScore(inning, 9) might return:
 }
 
 */ 
-
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
+let home = [];
+let away = [];
+function scores(callback,numberOfInnings){
+  return inning(numberOfInnings)
 
 }
+home = scores(9);
+away = scores(9);
+function finalScore(arr1,arr2){
+  for(let i=0; i<arr1.length; i++){
+    return ` This is the final home score ${arr1[i]}`
+  }
+  for(let i=0; i<arr2.length; i++)
+  {return `This is the final away score ${arr2[i]}`
+};
+ console.log(finalScore(home,away));
+ 
 
-/* Task 4: 
 
-Create a function called `scoreboard` that accepts the following parameters: 
 
-(1) Callback function `getInningScore`
-(2) Callback function `inning`
-(2) A number of innings
 
-and returns the score at each pont in the game, like so:
+// /* Task 4: 
 
-1st inning: awayTeam - homeTeam
-2nd inning: awayTeam - homeTeam
-3rd inning: awayTeam - homeTeam
-4th inning: awayTeam - homeTeam
-5th inning: awayTeam - homeTeam
-6th inning: awayTeam - homeTeam
-7th inning: awayTeam - homeTeam
-8th inning: awayTeam - homeTeam
-9th inning: awayTeam - homeTeam
+// Create a function called `scoreboard` that accepts the following parameters: 
 
-Final Score: awayTeam - homeTeam */
+// (1) Callback function `getInningScore`
+// (2) Callback function `inning`
+// (2) A number of innings
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
-}
+// and returns the score at each pont in the game, like so:
+
+// 1st inning: awayTeam - homeTeam
+// 2nd inning: awayTeam - homeTeam
+// 3rd inning: awayTeam - homeTeam
+// 4th inning: awayTeam - homeTeam
+// 5th inning: awayTeam - homeTeam
+// 6th inning: awayTeam - homeTeam
+// 7th inning: awayTeam - homeTeam
+// 8th inning: awayTeam - homeTeam
+// 9th inning: awayTeam - homeTeam
+
+// Final Score: awayTeam - homeTeam */
+
+// function scoreboard(callBack1,callBack2,numberOfInnings) {
+ 
+// }
 
 
